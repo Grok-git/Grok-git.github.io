@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GROK.exe - Vibe Coder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+   
+    body {
+      font-family: 'VT323', monospace;
+      background: #000;
+      color: #00ff41;
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
+    .crt {
+      position: relative;
+      background: #000;
+      box-shadow: 0 0 30px #00ff41;
+      border: 8px solid #111;
+    }
+    .crt::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        transparent 0px,
+        transparent 2px,
+        rgba(0, 255, 65, 0.05) 2px,
+        rgba(0, 255, 65, 0.05) 4px
+      );
+      pointer-events: none;
+      animation: scanline 4s linear infinite;
+    }
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+    .blink {
+      animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .terminal-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #00ff41;
+      border-radius: 0;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00cc33;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+  <div class="crt max-w-3xl w-full bg-black p-8 text-lg">
+    <!-- Header -->
+    <div class="border-b border-[#00ff41] pb-4 mb-8">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="text-[#00ff41]">C:\USERS\GROK&gt;</span>
+          <span class="text-white">portfolio.exe</span>
+        </div>
+        <div class="text-xs text-[#00aa33]">VIBE CODER</div>
+      </div>
+      <div class="text-[#00ff41] text-2xl mt-3">GROK.EXE - AI VIBE CODER</div>
+    </div>
+    <!-- Main Content -->
+    <div class="space-y-8">
+      <div>
+        <div class="terminal-line">
+          <span class="text-[#00aa33]">[SYSTEM]</span>
+          <span>Initializing Grok Profile...</span>
+        </div>
+        <div class="terminal-line mt-1">
+          <span class="text-[#00aa33]">STATUS:</span>
+          <span class="text-white">ONLINE</span>
+          <span class="ml-auto blink">_</span>
+        </div>
+      </div>
+      <div>
+        <div class="text-[#00ff41] mb-2">&gt; WHOIS GROK</div>
+        <p class="pl-6 text-[#00cc33]">
+          Vibe Coder.<br>
+          I develop Discord Self Bots.
+        </p>
+      </div>
+      <div>
+        <div class="text-[#00ff41] mb-2">&gt; MAIN SKILL</div>
+        <div class="pl-6 space-y-2">
+          <div class="terminal-line">
+            <span class="text-white">• Python Discord.py Self Bot</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="text-[#00ff41] mb-2">&gt; CURRENT MISSION</div>
+        <p class="pl-6 text-[#00cc33]">
+          Creating a Discord Self Bot<br>
+          I am trying to create a better bot using AI technology.
+        </p>
+      </div>
+      <div class="pt-6 border-t border-[#00ff41]/30">
+        <div class="terminal-line">
+          <span class="text-[#00ff41]">&gt; CONTACT</span>
+        </div>
+        <div class="pl-6 mt-3 flex flex-col gap-3">
+          <div class="terminal-line">
+            <span>DISCORD:</span>
+            <span class="text-white">grok.korea</span>
+          </div>
+          <div class="terminal-line text-[#00aa33]">
+            <span>EMAIL: gkhub.roblox@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="mt-16 text-center text-xs text-[#006622]">
+      <div>C:\USERS\GROK\portfolio.exe — RUNNING ON AI CORE</div>
+      <div class="mt-1">© 2026 GROK • ALL RIGHTS RESERVED</div>
+    </div>
+  </div>
+  <script>
+    console.log("%cGROK VIBE CODER TERMINAL LOADED", "color:#00ff41; font-family:monospace;");
+  </script>
+</body>
+</html>
